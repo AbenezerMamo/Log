@@ -5,9 +5,10 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <stddef.h>
 
 int session[1000];
-int current = 0;
+int current;
 double ROUND = 0.01;
 double BONUS = 0.25;
 
@@ -34,12 +35,8 @@ int action(int y)
 	
 int main(int argc, char *argv[])
 {
-	struct tm start = {.tm_year=2025-1970};
-	struct tm *now = NULL;
-	mktime(&start);
-	//double millie = 1000;
 	const int value = atoi(argv[1]);
-	
+	const int current = 0;	
 	printf("Value: %d\n", value);
 	
 	for (int i = 1; i < value; i++)
@@ -50,54 +47,53 @@ int main(int argc, char *argv[])
 		if (!price)
 		{
 			printf("Listing: ( %d: %s )\n", i, session[i]);
+//			printf("SALE: %d -- (%d)\n", i, session[i]);
+//			printf("SALE: %d -- (%d)\n", i, (bool*)price);
+
 		}
-//		printf("SALE: %d -- (%d)\n", i, (bool*)price);
-		
+
 		if (price)
 		{
 			session[i] = 1;
-			current = i;
-//			continue;
-//			session[i] = 1;
 			printf("SALE: ( %d: %d )\n", i, session[i]);
-}
-		
-		//return session[i];	
-/*	}
-	if (current > i)
-	{
-		session[current] = 1;
-					printf("SALE: ( %d: %d )\n", i, session[i]);
+		}
+		if (current > i)
+		{
+			session[current] = 1;
+			printf("SALE: ( %d: %d )\n", i, session[i]);
 
-	}*/
-//		printf("Listing: ( %d: %d )\n", i, session[i]);
+		}
+/*
+		printf("Listing: ( %d: %d )\n", i, session[i]);
+
+		printf("DATA: %s\n", &session);
+		printf("argc = %d\n", argc);
+		printf("Listing: ( %d: %d )\n", i, session[i]);
 //		return session[i];
-	}	
 
-//		printf("DATA: %s\n", &session);
-//		printf("argc = %d\n", argc);
-//		printf("Listing: ( %d: %d )\n", i, session[i]);
+/*
+/*
+	struct tm start = {.tm_year=2025-1970};
+	struct tm *now = NULL;
+	mktime(&start);
+	
 
+	//double millie = 1000;	
 
 	for (int ndx = 0; ndx != argc; ++ndx)
 	{
 		printf("argv[%d] --> %s\n", ndx, argv[ndx]);
 		printf("argv[argc] = %p\n", (void*)argv[argc]);
-
-
-/*
 		
-
 		printf("Local: %s", &start);
 	
 		clock_t start_time, end_time;
 		double cpu_time_used;
 
 		start_time = clock(); // Record start time
-	
 		double cost_per_click = 1;
 	}
-		
+		/*
 	for (int i = 1; i < value; i++)
 	{	
 	//	ROUND = ROUND + 0.01;
@@ -120,9 +116,11 @@ int main(int argc, char *argv[])
 			//current--;
 		}
 	}
-*/
-
-/*
+	
+	
+	struct tm start = {.tm_year=2025-1970};
+	struct tm *now = NULL;
+	mktime(&start);
 	time_t epoch = 0;
 	printf("%jd seconds since the epoch began\n", (intmax_t)epoch);
 	printf("%s", asctime(gmtime(&epoch)));
@@ -154,9 +152,12 @@ int main(int argc, char *argv[])
 	asctime_r(str, sizeof str, localtime_r(&t, &buf));
 	printf("local: %s", str);
 	#endif
-
 	}
-*/	
-	}
-return 1;
+	*/
 }
+return 1;
+
+}
+
+
+
