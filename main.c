@@ -63,6 +63,8 @@ int main(int argc, char *argv[])
 			printf("SALE: ( %d: %d )\n", i, session[i]);
 
 		}
+	}
+	}
 /*
 		printf("Listing: ( %d: %d )\n", i, session[i]);
 
@@ -71,8 +73,6 @@ int main(int argc, char *argv[])
 		printf("Listing: ( %d: %d )\n", i, session[i]);
 //		return session[i];
 
-/*
-/*
 	struct tm start = {.tm_year=2025-1970};
 	struct tm *now = NULL;
 	mktime(&start);
@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
 		start_time = clock(); // Record start time
 		double cost_per_click = 1;
 	}
-		/*
+	
 	for (int i = 1; i < value; i++)
 	{	
 	//	ROUND = ROUND + 0.01;
@@ -153,11 +153,10 @@ int main(int argc, char *argv[])
 	printf("local: %s", str);
 	#endif
 	}
-	*/
-}
-return 1;
+	*/	
+//return 1;
 
-}
+
 
 
 
