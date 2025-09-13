@@ -3,22 +3,82 @@
 #include <time.h>
 #include <math.h>
 #include <stdlib.h>
+#include <string.h>
+	
+typedef struct Condition {
+	char *type[20];
+} Condition;
 
-#define MAX_INPUT 1000
-int main(void) {
+typedef struct Status {
+	char *type[20];
+} Status;
+
+typedef struct Result {
+	int refresh;
+} Result;
+
+typedef struct Reaction {
+	char *type[20];
+} Reaction;
+
+typedef struct Because {
+	char *type[20];
+} Because;
+
+struct Condition preference;
+struct Status current;
+struct Result outcome;
+struct Reaction opinion;
+struct Because cause;
+
+int main(void)
+{
 	int data[] = {2,5,8};
-	
-	size_t session = sizeof(data);
-	printf("size: %lu \n", sizeof(data));
-	printf("type: %lu\n", sizeof(data[0]));
-	printf("amount: %lu\n", sizeof(data) / sizeof(data[0]));
-	for (int i = 0; i < (int)sizeof(data) / (int)sizeof(data[0]); i++)
-	{	
-		printf("item %d: (%lu) %d\n", i, sizeof(data[i]), abs(data[i]));
-//		printf("data: %zu - %lu \n", sizeof(data[], (session / sizeof(data));
+	preference.type[0] = "natural";// state:"false"};
+	preference.type[1] = "normal";//, state:"false"};
+	preference.type[2] = "original";//, state:"false"};
 
+	current.type[0] = "false";
+	current.type[1] = "unnatural";
+	current.type[2] = "worse_than_before";
+
+	outcome.refresh = 1;
+
+	opinion.type[0] = "pain";
+	opinion.type[0] = "disgust";
+	opinion.type[0] = "dissapproval";
+
+	cause.type[0] = "root_factor";
+	cause.type[1] = "enviroment_exposure";
+	cause.type[2] = "infection";
+	
+	for (int i = 0; i < 3; i++)
+	{
+		printf("%d: %s \n", i, preference.type[i]);
 	}
+	printf("\n");
+	for (int i = 0; i < 3; i++)
+	{
+		printf("%d: %s \n", i, current.type[i]);
+	}
+	printf("\n");
 
-	
-	return 0;
+	for (int i = 0; i < 3; i++)
+	{
+		printf("%d: %s \n", i, cause.type[i]);
+	}
+	printf("\n");
+
+	if (outcome.refresh)
+	{
+		printf("Refreshes! \n", outcome.refresh);
+	}
+	else
+	{
+		printf("Does not refresh! \n", outcome.refresh);
+	}
+	printf("\n");
+
+
+return 0;
 }
