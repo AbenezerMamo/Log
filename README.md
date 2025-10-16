@@ -1,6 +1,10 @@
 # Log
 Log - 
 
+-- 80-character limit
+
+-- 66-chracter optimial
+
 Always Clean -
 -- Dirty
 
