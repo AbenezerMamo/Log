@@ -4,10 +4,29 @@
 #include <stddef.h>
 #include <time.h>
 
+typedef struct Cadence {
+	int seconds;
+	int minutes;
+	int hours;
+	int days;
+	int weeks;
+	int month;
+} Cadence;
+
+struct Cadence cycle;
+
 //time_t payload = time();
 int main(void)
 {
-
+	cycle.seconds = 6;
+	cycle.minutes = 5;
+	cycle.hours = 4;
+	cycle.days = 3;
+	cycle.weeks = 2;
+	cycle.month = 1;
+	
+	printf("Seconds: %d\n", cycle.seconds);
+	
 int days[31];
 time_t time(time_t *timer);
 time_t now;
@@ -25,11 +44,10 @@ time_t now;
 		printf("Msg %d: ", i);
 		scanf("%s", message);
 	
-//		printf("Sent!\n"); 
+		printf("Next!\n"); 
 	
 		days[i] = *(message);
 	}
-
 	printf("\n");
 
 for (int x = 0; x < 3; x++)
@@ -48,7 +66,7 @@ for (int x = 0; x < 3; x++)
 //	const struct tm *session;
 //	const struct payload *current;
 	
-	long int wait;
+	//long int wait;
 	
 //	wait = sizeof(session);
 	//printf("Session: %s\n", ctime(&localTimeInfo));
