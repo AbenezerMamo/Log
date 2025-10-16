@@ -1,5 +1,36 @@
 # Log
-Log
+Log - 
+
+Always Clean -
+-- Dirty
+
+-- Unclean
+
+Nurture Myself -
+
+-- 6 seconds (grade)
+
+-- 5 minutes (our-hands)[(dozen)]
+
+-- 4 hours (.lunch.)
+
+-- 3 days (21 days)
+
+-- 2 weeks (pay)
+
+-- 1 month (28-31)
+
+But I'm Filthy - 
+
+-- 1 Take
+
+-- Early & Often [...as the youngest...)
+
+-- Precedence
+
+-- Virgin
+Man - 
+"copying and pasting cross-references to manual pages"
 
 # Line-Item
 
