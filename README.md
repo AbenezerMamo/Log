@@ -201,6 +201,38 @@ Versioning
 
 -- Original
 
+--- Contingent
+
+--- Enhance
+
+--- Set
+
+--- Remark
+
+--- Commend
+
+--- Appreciate
+
+--- Liking
+
+--- Entireity
+
+--- Deprecate
+
+--- Taunt
+
+--- Tease
+
+--- Discount
+
+--- Disdain
+
+--- Name
+
+--- Corner
+
+--- Fix
+
 -- Higher highs (top)
 
 -- Higher lows (bottom)
